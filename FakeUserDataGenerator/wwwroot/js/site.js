@@ -9,6 +9,7 @@ function reloadData() {
     const errors = $('#errorCount').val() || 0;
     const seed = parseInt($('#seedInput').val()) || 0;
     const locale = $('#region').val();
+    currentPage = 1;
 
     const data = {
         Count: count,
