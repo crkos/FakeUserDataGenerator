@@ -38,9 +38,14 @@ function reloadData() {
 
 function validateErrors() {
     const errors = $('#errorCount');
+    const errorsSlider = $('#errorSlider');
 
     if (errors.val() > 1000) {
         errors.val(1000)
+    }
+
+    if (errorsSlider.val() > 1000) {
+        errors.val(100)
     }
 }
 
