@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Fake User Data Generator";
+}
+
+<div class="text-center">
+    <h1>Fake User Data Generator</h1>
+
+    <div class="d-flex align-items-center justify-content-center gap-4">
+        <label>Region:</label>
+        <select id="region" class="form-select-sm">
+            <option value="pl">Poland</option>
+            <option value="en_US">USA</option>
+            <option value="es_MX">México</option>
+        </select>
+
+        <label>Errors per Record:</label>
+        <input type="range" id="errorSlider" min="0" max="1000" value="0" class="form-range w-25" step="0.1"/>
+        <input type="number" id="errorCount" min="0" max="1000" value="0" class="input-group-text" step="0.1"/>
+
+        <div>
+            <button onclick="generateRandomSeed()" class="btn btn-outline-secondary"><i class="bi bi-shuffle"></i></button>
+            <input type="text" id="seedInput" name="seed" placeholder="Enter seed manually" />
+        </div>
+
+        <button id="generateBtn" class="btn btn-outline-primary">Generate</button>
+    </div>
+
+    <table id="userTable" class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Index</th>
+                <th>Random Identifier</th>
+                <th>Full Name</th>
+                <th>Address</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
